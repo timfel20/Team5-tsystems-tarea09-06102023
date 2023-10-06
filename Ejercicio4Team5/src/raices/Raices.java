@@ -1,42 +1,22 @@
 package raices;
 
 public class Raices 
-{
-	//AQUI RAICES
-	
+{	
 	private double a;
 	private double b;
 	private double c;
-	
-	
-	
-
-
 
 	public Raices(double a, double b, double c) 
 	{
 		super();
 		this.a = a;
 		this.b = b;
-		this.c = c;
-		
-		
+		this.c = c;		
 	}
-
-
-
-
-
-
 
 	public double getA() {
 		return a;
 	}
-
-
-
-
-
 
 
 	public void setA(double a) {
@@ -44,19 +24,9 @@ public class Raices
 	}
 
 
-
-
-
-
-
 	public double getB() {
 		return b;
 	}
-
-
-
-
-
 
 
 	public void setB(double b) {
@@ -64,28 +34,17 @@ public class Raices
 	}
 
 
-
-
-
-
-
 	public double getC() {
 		return c;
 	}
-
-
-
-
-
 
 
 	public void setC(double c) {
 		this.c = c;
 	}
 	
-	
-	
-	
-	
+	public double getDiscriminante() {
+		return Math.pow(b, 2) - 4*a*c;
+	}
 	
 }
