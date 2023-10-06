@@ -5,6 +5,8 @@ public class Raices
 	private double a;
 	private double b;
 	private double c;
+	double solucion1=0;
+	double solucion2=0;
 
 	public Raices(double a, double b, double c) 
 	{
@@ -54,15 +56,34 @@ public class Raices
 		return (getDiscriminante() == 0);	
 	}
 	
-	public void calcular() {
-		if (tieneRaices()) {
-			double ecuacion1 = (-b + Math.sqrt(getDiscriminante())) / (2*a);
-			double ecuacion2 = (-b - Math.sqrt(getDiscriminante())) / (2*a);
-			System.out.println("Solución 1: " + ecuacion1);
-			System.out.println("Solución 1: " + ecuacion2);
-		} else {
+	public void calcular() 
+	{
+		
+		if (tieneRaices()) 
+		{
+			 solucion1 = (-b + Math.sqrt(getDiscriminante())) / (2*a);
+			 solucion2 = (-b - Math.sqrt(getDiscriminante())) / (2*a);
+			System.out.println("Solución 1: " + solucion1);
+			System.out.println("Solución 1: " + solucion2);
+		} else
+		{
 			System.out.println("No tiene solución");
 		}
+		
 			
+	}
+	
+	
+	public void obtenerRaices() 
+	{
+		
+		System.out.println("Solución 1: " + solucion1);
+
+	}
+	
+	public void obtenerRaiz() 
+	{
+		System.out.println("Solución 1: " + solucion1);
+
 	}
 }
