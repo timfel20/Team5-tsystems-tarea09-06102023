@@ -1,5 +1,6 @@
 package raices;
 
-public class Raices {
+public class Raices 
+{
 	//AQUI RAICES
 }
