@@ -47,4 +47,11 @@ public class Raices
 		return Math.pow(b, 2) - 4*a*c;
 	}
 	
+	public boolean tieneRaices() {
+		return (getDiscriminante() >= 0);
+	}
+	
+	public boolean tieneRaiz() {
+		return (getDiscriminante() == 0);	
+	}
 }
