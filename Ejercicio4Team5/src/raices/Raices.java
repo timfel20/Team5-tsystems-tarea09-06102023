@@ -8,7 +8,6 @@ public class Raices
 
 	public Raices(double a, double b, double c) 
 	{
-		super();
 		this.a = a;
 		this.b = b;
 		this.c = c;		
@@ -53,5 +52,17 @@ public class Raices
 	
 	public boolean tieneRaiz() {
 		return (getDiscriminante() == 0);	
+	}
+	
+	public void calcular() {
+		if (tieneRaices()) {
+			double ecuacion1 = (-b + Math.sqrt(getDiscriminante())) / (2*a);
+			double ecuacion2 = (-b - Math.sqrt(getDiscriminante())) / (2*a);
+			System.out.println("Solución 1: " + ecuacion1);
+			System.out.println("Solución 1: " + ecuacion2);
+		} else {
+			System.out.println("No tiene solución");
+		}
+			
 	}
 }
