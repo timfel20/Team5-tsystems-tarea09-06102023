@@ -1,14 +1,28 @@
 package raices;
 
+import java.util.Scanner;
+
 public class RaicesApp 
 {
 
 	public static void main(String[] args) 
 	{
+		Scanner scanner = new Scanner(System.in);
 		
-		Raices raiz = new Raices(1,2,3);
-		
-		System.out.println(raiz);
+		System.out.println("Escribir el valor de a");
+	    Double a = scanner.nextDouble(); 
+	    System.out.println(a);
+	    
+	    System.out.println("Escribir el valor de b");
+	    Double b = scanner.nextDouble(); 
+	    System.out.println(b);
+	    
+	    System.out.println("Escribir el valor de c");
+	    Double c = scanner.nextDouble(); 
+	    System.out.println(c);
+	    
+	    Raices raices = new Raices( a, b, c);
+	    raices.calcular();	
 		
 	}
 
