@@ -44,9 +44,13 @@ public class Raices
 		this.c = c;
 	}
 	
-	public double getDiscriminante() {
-		return Math.pow(b, 2) - 4*a*c;
+	
+	public double getDiscriminante() 
+	{
+		return Math.sqrt(Math.pow(b, 2) - 4*a*c);
 	}
+	
+	
 	
 	public boolean tieneRaices() {
 		return (getDiscriminante() >= 0);
