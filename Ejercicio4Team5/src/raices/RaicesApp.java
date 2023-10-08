@@ -22,8 +22,15 @@ public class RaicesApp
 	    System.out.println(c);
 	    
 	    Raices raices = new Raices( a, b, c);
+	    
+	    System.out.println(" --- El resultado és ---");
+
 	    raices.calcular();	
+	    
+	    scanner.close();
+  
 		
+	    
 	}
 
 }
