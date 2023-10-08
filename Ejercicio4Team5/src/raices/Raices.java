@@ -7,6 +7,7 @@ public class Raices
 	private double c;
 	double solucion1=0;
 	double solucion2=0;
+	
 
 	public Raices(double a, double b, double c) 
 	{
@@ -47,7 +48,7 @@ public class Raices
 	
 	public double getDiscriminante() 
 	{
-		return Math.sqrt(Math.pow(b, 2) - 4*a*c);
+		return Math.pow(b, 2) - 4*a*c;
 	}
 	
 	
@@ -65,13 +66,19 @@ public class Raices
 		
 		if (tieneRaices()) 
 		{
-			 solucion1 = (-b + Math.sqrt(getDiscriminante())) / (2*a);
-			 solucion2 = (-b - Math.sqrt(getDiscriminante())) / (2*a);
-			System.out.println("Solución 1: " + solucion1);
-			System.out.println("Solución 1: " + solucion2);
-		} else
+			
+			obtenerRaices();
+			
+		}
+		else if (tieneRaiz()) 
 		{
-			System.out.println("No tiene solución");
+			
+			obtenerRaiz();
+			
+		}
+		else
+		{
+			System.out.println("No tiene solucion");
 		}
 		
 			
@@ -81,13 +88,18 @@ public class Raices
 	public void obtenerRaices() 
 	{
 		
+		solucion1 = (-b + Math.sqrt(getDiscriminante())) / (2*a);
+		solucion2 = (-b - Math.sqrt(getDiscriminante())) / (2*a);
 		System.out.println("Solución 1: " + solucion1);
+		System.out.println("Solución 2: " + solucion2);
 
 	}
 	
 	public void obtenerRaiz() 
 	{
-		System.out.println("Solución 1: " + solucion1);
-
+		
+		double solucion = -b/2*a;
+		System.out.print("La unica solucion és: "+solucion);
+		
 	}
 }
